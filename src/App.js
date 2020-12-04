@@ -5,6 +5,7 @@ import './App.css';
 import BooksGrid from './components/books/BooksGrid';
 import AppNavbar from './components/layouts/AppNavbar';
 import BookList from './components/books/BookList';
+import Book from './components/books/Book';
 
 const App = () =>{
   const [items, setItems] = useState([]);
@@ -37,7 +38,9 @@ const App = () =>{
             <BooksGrid isLoading={isLoading} items={items.results}/>
           </div>
         </Route>
-        
+        <Route exact path="/book/:isbn">
+          <Book isLoading={isLoading} items={items.results}/>
+        </Route>
         
       </Router>
     </div>

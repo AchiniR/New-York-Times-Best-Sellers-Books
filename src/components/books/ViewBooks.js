@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col, Row, Label, Button} from 'reactstrap';
+import {Link} from 'react-router-dom';
 
 const ViewBooks = ({item}) => {
     return (
@@ -9,17 +9,17 @@ const ViewBooks = ({item}) => {
                 <img src={item.book_image} alt='' />
                 </div>
                 <div className='card-back'>
-                    <h1>{item.title}</h1>
-                    
-                        <strong>Author Name:</strong> {item.author}
+                    <label style={{color: "#9a9d8d"}}>Rank: {item.rank}</label><h3>{item.title}</h3>
                         
-                        <br/><br/><strong>Publisher:</strong> {item.publisher}
+                        <strong style={{color: "#9a9d8d"}}>Author Name:</strong> {item.author}
                         
-                        <br/><br/><strong>ISBN:</strong> {item.primary_isbn10}<br/>{item.primary_isbn13}
+                        <br/><br/><strong style={{color: "#9a9d8d"}}>Publisher:</strong> {item.publisher}
+                        
+                        <br/><br/><strong style={{color: "#9a9d8d"}}>ISBN:</strong> {item.primary_isbn10}&nbsp;|&nbsp;{item.primary_isbn13}
                         
                         <br/><br/><button><a href={item.amazon_product_url} style={{color: "black"}}>Buy</a></button>
 
-                        <br/><br/>
+                        <br/><br/><Link to={{pathname:`/book/${item.primary_isbn10}`}} style={{color: "#9a9d8d"}}>Click for more details..</Link>
                 </div>
             </div>
         </div>
