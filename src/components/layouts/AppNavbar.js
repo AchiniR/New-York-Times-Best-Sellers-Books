@@ -1,44 +1,26 @@
-import React, { useState, Fragment }  from 'react';
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
-  } from 'reactstrap';
-  
+import React from 'react';
 
-const AppNavbar = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
-    
-    const toggle = () => setIsOpen(!isOpen);
+const AppNavbar = () => {
   
     return (
         <div>
             <ul>
-                <li><a class="active" href="/">Home</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Fiction</a>
-                    <div class="dropdown-content">
+                <li><a className="active" href="/">Home</a></li>
+                <li className="dropdown">
+                    <a href="javascript:void(0)" className="dropbtn">Fiction</a>
+                    <div className="dropdown-content">
                         <a href="#">Link 1</a>
                     </div>
                 </li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Non-Fiction</a>
-                    <div class="dropdown-content">
+                <li className="dropdown">
+                    <a href="javascript:void(0)" className="dropbtn">Non-Fiction</a>
+                    <div className="dropdown-content">
                         <a href="#">Link 1</a>
                     </div>
                 </li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Other</a>
-                    <div class="dropdown-content">
+                <li className="dropdown">
+                    <a href="javascript:void(0)" className="dropbtn">Other</a>
+                    <div className="dropdown-content">
                         <a href="#">Link 1</a>
                     </div>
                 </li>

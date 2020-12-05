@@ -33,7 +33,7 @@ const App = () =>{
           <BookList  isLoading={isLoading} items={items.results}/>
         </Route>
         <Route  exact path="/">
-        <h2>NYT Best Seller Book Types</h2>
+        <h1>The New York Times Best Seller Book Categories</h1>
           <div className="container">
             <BooksGrid isLoading={isLoading} items={items.results}/>
           </div>

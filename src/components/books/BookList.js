@@ -10,7 +10,7 @@ const BookList = ({ items, isLoading}) => {
         <section className='cards'>
             {items.lists.map((item) => (
                 (item.list_id == id) ?
-                    item.books.map((book) => (
+                item.books.map((book) => (
                         <ViewBooks  key={item.primary_isbn10} item={book}></ViewBooks> 
                     )): ""
             ))}
